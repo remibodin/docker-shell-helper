@@ -1,0 +1,18 @@
+#!/bin/bash
+
+###
+# Remove all stopped containers
+###
+
+CONTAINER_HASH=$(docker ps -a -q)
+if  [ ! -z $CONTAINER_HASH ]
+then
+    read -p "Are you sure you want remove all stopped containers? " -n 1 -r
+    echo
+    if [[ $REPLY =~ ^[Yy]$ ]]
+    then
+	docker rm $CONTAINER_HASH;
+    fi
+else
+    echo "no stopped container";
+fi
