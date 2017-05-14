@@ -1,5 +1,12 @@
 # docker-shell-helper
 
-**dsh-rmsc** remove stopped containers
+## Install 
+    git clone git@github.com:remibodin/docker-shell-helper.git
+    export PATH=${PATH}:${PWD}/docker-shell-helper
 
-**dsh-rmui** remove unstagge images
+## Commandes
+
+| cmd          |                           |
+|--------------|---------------------------|
+| **dsh-rmsc** | remove stopped containers |
+| **dsh-rmui** | remove unstagge images    |
