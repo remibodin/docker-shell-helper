@@ -1,0 +1,7 @@
+#!/bin/bash
+
+###
+# Attache bash to container
+###
+
+docker exec -it ${1} bash
