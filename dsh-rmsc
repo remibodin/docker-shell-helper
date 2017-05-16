@@ -4,7 +4,7 @@
 # Remove all stopped containers
 ###
 
-CONTAINER_HASH=$(docker ps -a -q)
+CONTAINER_HASH=$(docker ps --all --quiet --filter "status=exited")
 if  [ ! -z "$CONTAINER_HASH" ]
 then
     read -p "Are you sure you want remove all stopped containers? " -n 1 -r
