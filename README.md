@@ -10,3 +10,4 @@
 |--------------|---------------------------|
 | **dsh-rmsc** | remove stopped containers |
 | **dsh-rmui** | remove unstagge images    |
+| **dsh-astc** | start bash in container   |
