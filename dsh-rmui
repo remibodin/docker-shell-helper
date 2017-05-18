@@ -7,12 +7,7 @@
 IMAGE_HASH=$(docker images | grep "^<none>" | awk '{print $3}');
 if [ ! -z "$IMAGE_HASH" ]
 then
-    read -p "Are you sure you want remove all unstagged image? " -n 1 -r
-    echo
-    if [[ $REPLY =~ ^[Yy]$ ]]
-    then
-	docker rmi $IMAGE_HASH;
-    fi
+    docker rmi $IMAGE_HASH;
 else
     echo "no unstagged image";
 fi
