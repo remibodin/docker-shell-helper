@@ -1,0 +1,13 @@
+#!/bin/bash
+
+###
+# Stop all container
+###
+
+CONTAINER_HASH=$(docker ps --quiet)
+if  [ ! -z "$CONTAINER_HASH" ]
+then
+    docker stop $(docker ps -q)
+else
+    echo "no running container"
+fi
